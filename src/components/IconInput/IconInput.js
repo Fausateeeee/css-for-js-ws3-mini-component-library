@@ -89,13 +89,10 @@ const Input = styled.input`
   border-bottom: var(--borderBottom);
   font-size: var(--fontSize);
   font-weight: 700;
-  color: ${COLORS.gray700};
+  color: inherit;
   padding-left: var(--paddingLeft);
   line-height: var(--lineHeight);
 
-  &:hover {
-    color: ${COLORS.black};
-  }
   &:focus {
     outline-offset: 2px;
   }
