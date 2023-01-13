@@ -9,20 +9,22 @@ import VisuallyHidden from "../VisuallyHidden";
 const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
   const SIZES = {
     small: {
-      iconSize: "12px",
+      iconSize: "16px",
       strokeWidth: 1,
       borderBottom: "1px solid black",
       fontSize: "0.875rem",
       paddingLeft: "20px",
       lineHeight: "1rem",
+      height: "24px",
     },
     large: {
-      iconSize: "16px",
+      iconSize: "24px",
       strokeWidth: 2,
       borderBottom: "2px solid black",
       fontSize: "1.125em",
-      paddingLeft: "26px",
+      paddingLeft: "30px",
       lineHeight: "1.3125rem",
+      height: "36px",
     },
   };
   const styles = SIZES[size];
@@ -50,6 +52,7 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
           "--fontSize": styles.fontSize,
           "--paddingLeft": styles.paddingLeft,
           "--lineHeight": styles.lineHeight,
+          "--height": styles.height,
         }}
         type="text"
       />
@@ -60,7 +63,6 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
 const Wrapper = styled.div`
   position: relative;
   width: fit-content;
-  height: 100%;
   font-family: "Roboto";
   color: ${COLORS.gray700};
 
@@ -82,6 +84,7 @@ const IconWrapper = styled.div`
 
 const Input = styled.input`
   width: var(--width);
+  height: var(--height);
   border: none;
   border-bottom: var(--borderBottom);
   font-size: var(--fontSize);
