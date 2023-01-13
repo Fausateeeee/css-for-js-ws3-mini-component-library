@@ -12,8 +12,9 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
       iconSize: "12px",
       strokeWidth: 1,
       borderBottom: "1px solid black",
-      fontSize: "0.875em",
+      fontSize: "0.875rem",
       paddingLeft: "20px",
+      lineHeight: "1rem",
     },
     large: {
       iconSize: "16px",
@@ -21,6 +22,7 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
       borderBottom: "2px solid black",
       fontSize: "1.125em",
       paddingLeft: "26px",
+      lineHeight: "1.3125rem",
     },
   };
   const styles = SIZES[size];
@@ -47,6 +49,7 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
           "--borderBottom": styles.borderBottom,
           "--fontSize": styles.fontSize,
           "--paddingLeft": styles.paddingLeft,
+          "--lineHeight": styles.lineHeight,
         }}
         type="text"
       />
@@ -85,6 +88,7 @@ const Input = styled.input`
   font-weight: 700;
   color: ${COLORS.gray700};
   padding-left: var(--paddingLeft);
+  line-height: var(--lineHeight);
 
   &:hover {
     color: ${COLORS.black};
